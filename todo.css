@@ -36,7 +36,13 @@ li{
     justify-content:space-between;
     border-bottom: 1px solid #ededed;
     width: 100%;
+    /* padding: 16px 16px 16px 60px; */
+    font-size: 24px;
 }
+input[type=checkbox]:checked~#listItem {
+    text-decoration: line-through;
+    color: rgb(228, 228, 228);
+  }
 #listItem{
     padding: 10px;
 }

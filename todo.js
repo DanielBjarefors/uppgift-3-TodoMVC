@@ -1,8 +1,4 @@
 
-
-
-// document.querySelector("#delete").addEventListener("click", createTable);
-
 function addListItem(){
 
     let input = document.querySelector("#inputItem").value;
