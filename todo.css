@@ -6,7 +6,18 @@ body{
     background: #f5f5f5;
     align-items: center;
     flex-wrap: wrap;
-    
+}
+main{
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
+    padding: 20px;
+}
+#inputItem{
+    padding: 16px 16px 16px 60px;
+    font-size: 24px;
+}
+::placeholder{
+    color: rgb(228, 228, 228);
 }
 ul{
     list-style-type: none;
@@ -15,6 +26,7 @@ ul{
     flex-wrap: wrap;
     align-items: center;
     align-items: flex-start;
+    padding-left: 0;
 }
 li{
     display: flex;
@@ -22,13 +34,14 @@ li{
     flex-wrap: wrap;
     align-items: center;
     justify-content:space-between;
-    width: 100%
+    border-bottom: 1px solid #ededed;
+    width: 100%;
 }
 #listItem{
     padding: 10px;
 }
 #todoListItem li button{
     position: absolute;
-    right:10px
+    right:10px;
 }
 
