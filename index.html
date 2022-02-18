@@ -1,1 +1,41 @@
-<h1>Hello!</>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js" defer></script>
+    <title>Todo</title>
+</head>
+<body>
+    <header>
+        <h1>Todo For You!</h1>
+    </header>
+    <main>
+        <input id="inputItem" placeholder="What do you need to do?" autofocus="">
+        <br><br>
+        <input  type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        
+        <ul id="todoList">
+            
+
+        </ul>
+        <template id="todoListItem">
+            <li>
+            <input id="chekbox" type="checkbox" name="" id="">
+                <p id="listItem"></p>
+                <button id="delete" type="button">❌</button>
+            </li>
+          </template>
+
+          <button onclick="addListItem()" id='search'>add</button>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+
+</html>
