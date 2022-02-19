@@ -8,6 +8,8 @@ body{
     flex-wrap: wrap;
 }
 main{
+    display: flex;
+    flex-direction: column;
     background: #fff;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
     padding: 20px;
@@ -43,11 +45,21 @@ input[type=checkbox]:checked~#listItem {
     text-decoration: line-through;
     color: rgb(228, 228, 228);
   }
-#listItem{
+.listItem{
     padding: 10px;
 }
 #todoListItem li button{
     position: absolute;
     right:10px;
 }
+button{
+    border: 0;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 30px;
+    opacity:calc(0.5);
+}
 
+.delete:hover, #checkAll:hover{
+    opacity:calc(1);
+}
