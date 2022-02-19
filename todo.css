@@ -53,7 +53,7 @@ input[type=checkbox]:checked~#listItem {
     position: absolute;
     right:10px;
 }
-button{
+main button{
     border: 0;
     background-color: transparent;
     padding: 10px;
@@ -62,6 +62,16 @@ button{
 }
 button:hover{
     opacity:calc(1);
+}
+footer button{
+    border: 0;
+    background-color: transparent;
+    font-size: 15px;
+   
+    padding: 10px;
+    opacity:calc(0.5);
+    /* text-align: center; */
+    border-top: 1px solid #e6e6e6;
 }
 
 
