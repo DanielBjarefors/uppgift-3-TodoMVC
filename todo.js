@@ -2,7 +2,7 @@
 document.querySelector("#add").addEventListener("click", addListItem);
 document.querySelector("#checkAll").addEventListener("click", checkAllItems);
 document.querySelector("#removeChecked").addEventListener("click", removeChecked);
-
+document.querySelector(".checkbox"),addEventListener("click", updateCounter)
 
 function addListItem(){
 
@@ -19,20 +19,43 @@ function addListItem(){
     }
 }
 
-
+let counter = 0;
 function checkAllItems (){
-
     let items = document.querySelectorAll(".list")
-
     for (const e of items) {
-        e.childNodes[1].checked = true;
+        if(e.childNodes[1].checked === true) {
+            counter++;
+        }
     }
-
-    //remove checked???
+    if (counter === items.length) {
+        for (const e of items) {
+            e.childNodes[1].checked = false;
+        } 
+    }
+    else{
+        for (const e of items) {
+            e.childNodes[1].checked = true;
+        }       
+    }
+    counter=0;
 }
 
 function removeChecked(){
+    let items = document.querySelectorAll(".list")
+    for (const e of items) {
+        if(e.childNodes[1].checked === true) {
+            e.remove();
+        }
+    }
+}
 
-
-
+function updateCounter(){
+    let active=0;
+    let items = document.querySelectorAll(".list")
+    for (const e of items) {
+        if(e.childNodes[1].checked === false) {
+            active++;
+        }
+    }
+    document.querySelector("#itemsLeft").textContent=active+" items left";
 }
