@@ -13,10 +13,10 @@
     </header>
     <section>
         <main>
-            <div>
-            <button id="checkAll" type="button">🔽</button>
-            <input id="inputItem" placeholder="What do you need to do?" autofocus>
-        </div>    
+            <div id="topBox">
+                <button id="checkAll" type="button">🔽</button>
+                <input id="inputItem" placeholder="What do you need to do?">
+            </div>    
             <ul id="todoList">
             </ul>
             <template id="todoListItem">
@@ -26,20 +26,13 @@
                     <button class="delete" type="button">❌</button>
                 </li>
             </template>
-
-            <button id='add'>add</button>
-            
-
         </main>
         <footer>
             <p id="itemsLeft"></p> 
             <button id='all'>All</button>
             <button id='active'>Active</button>
             <button id='completed'>Completed</button>
-            <button id='removeChecked'>Clear completed</button>
-
-
-
+            <button id='clearChecked'>Clear completed</button>
         </footer>
     </section>
 </body>
