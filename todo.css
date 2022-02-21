@@ -20,12 +20,13 @@ body{
 section{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     background: #fff;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
-    padding: 10px min(60px, 10%);
     align-items: center;
-
+    
 }
+
 #checkAll{
     font-size: 25px;
     border-radius: 100%;
@@ -55,18 +56,24 @@ main ul{
     flex-wrap: wrap;
     align-items: center;
     align-items: flex-start;
-    padding-left: 12px;
+    padding-left: 13px;
     margin: 0;
+    
 }
 main li{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-between;
-    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
     width: 100%;
     font-size: 24px;
+    height:55px;
+    align-content: space-around;
+}
+
+.delete:hover{
+    opacity:calc(1);
 }
 input[type=checkbox]:checked~#listItem {
     text-decoration: line-through;
@@ -79,6 +86,7 @@ input[type=checkbox] {
 
 .listItem{
     padding: 10px;
+    margin-right: auto;
 }
 
 main button{
@@ -87,13 +95,14 @@ main button{
     font-size: 20px;
     opacity:calc(0.5);
 }
+
 button:hover{
     opacity:calc(1);
 }
 footer button, footer p{
     border: 0;
     background-color: transparent;
-    font-size: 15px;   
+    font-size: 12px;   
     opacity:calc(0.5);
 }
 footer ul{
@@ -102,8 +111,15 @@ footer ul{
     flex-direction: row;
     list-style-type: none;    
     flex-wrap: wrap;  
-    padding: 0 20px 0 20px;  
-    
+    padding: 0 20px 0 20px;      
+}
+footer p{
+    padding-left: 20px;
+    padding-right: 5px;
+}
+footer{
+    border-top: 1px solid #ededed;
+    align-items: center;
 }
 
 

@@ -118,19 +118,20 @@ function updateCounter () {
     }
 
     if (activeItems>0) {
+        document.querySelector("#itemsLeft").style.visibility="visible";
         document.querySelector("#itemsLeft").textContent=activeItems+" items left";
         document.querySelector("#checkAll").style.display="initial";
     } 
     else {
-        document.querySelector("#itemsLeft").textContent="";    
+        document.querySelector("#itemsLeft").style.visibility="hidden";    
         
     }
 
     if (activeItems===items.length) {
-        document.querySelector("#clearChecked").style.display="none";
+        document.querySelector("#clearChecked").style.visibility="hidden";
     } 
     else {
-        document.querySelector("#clearChecked").style.display="initial";
+        document.querySelector("#clearChecked").style.visibility="visible";
     }
     
 }
