@@ -26,9 +26,15 @@ section{
     align-items: center;
 
 }
+#checkAll{
+    font-size: 25px;
+    border-radius: 100%;
+
+}
 #topBox{
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 #inputItem{
     padding: 16px 16px 16px 16px;
@@ -42,17 +48,17 @@ textarea:focus, input:focus{
 ::placeholder{
     color: rgb(228, 228, 228);
 }
-ul{
+main ul{
     list-style-type: none;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     align-items: flex-start;
-    padding-left: 0;
+    padding-left: 12px;
     margin: 0;
 }
-li{
+main li{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -67,19 +73,17 @@ input[type=checkbox]:checked~#listItem {
     color: rgb(228, 228, 228);
   }
 input[type=checkbox] {
-    transform: scale(1.5);
+    transform: scale(2);
+    
 }
+
 .listItem{
     padding: 10px;
 }
-#todoListItem li button{
-    position: absolute;
-    right:10px;
-}
+
 main button{
     border: 0;
     background-color: transparent;
-    padding: 10px;
     font-size: 20px;
     opacity:calc(0.5);
 }
@@ -90,9 +94,16 @@ footer button, footer p{
     border: 0;
     background-color: transparent;
     font-size: 15px;   
-    padding: 10px;
     opacity:calc(0.5);
 }
-
+footer ul{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;    
+    flex-wrap: wrap;  
+    padding: 0 20px 0 20px;  
+    
+}
 
 

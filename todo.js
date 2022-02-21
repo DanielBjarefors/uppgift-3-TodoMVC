@@ -1,5 +1,6 @@
 //todo :)
-//fix active and complete count all
+//layout footer
+//checkAll button
 
 //event listeners
 document.querySelector("#inputItem").addEventListener('keypress', function (e) {
@@ -18,10 +19,13 @@ document.querySelector("#checkAll").style.display="none";
 
 function addListItem () {
     let input = document.querySelector("#inputItem").value;
+    if (input==="") {
+        return
+    }
     let li = document.querySelector("#todoListItem").content.firstElementChild.cloneNode(true);
     li.querySelector(".listItem").textContent = input;
     document.querySelector("#todoList").appendChild(li)
-
+    
     document.querySelector("#inputItem").value ='';
 
     li.querySelector(".delete").onclick = () => {
@@ -34,7 +38,6 @@ function addListItem () {
     }
     updateCounter();
     document.querySelector("footer").style.display="flex";
-
 }
 
 
@@ -81,6 +84,9 @@ function displayActive () {
         if(e.childNodes[1].checked === true) {
             e.style.display="none"
         }
+        else{
+            e.style.display="flex" 
+        }
     }
 }
 
@@ -89,6 +95,9 @@ function displayCompleted () {
     for (const e of items) {
         if(e.childNodes[1].checked === false) {
             e.style.display="none"
+        }
+        else{
+            e.style.display="flex" 
         }
     }
 }

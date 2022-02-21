@@ -21,7 +21,8 @@
             </ul>
             <template id="todoListItem">
                 <li class="list">
-                <input class="checkbox" type="checkbox">
+                    <input class="checkbox" type="checkbox">
+                    <label for="checkbox"></label>
                     <p class="listItem"></p>
                     <button class="delete" type="button">❌</button>
                 </li>
@@ -29,9 +30,11 @@
         </main>
         <footer>
             <p id="itemsLeft"></p> 
-            <button id='all'>All</button>
-            <button id='active'>Active</button>
-            <button id='completed'>Completed</button>
+            <ul>
+                <li><button id='all'>All</button></li>
+                <li><button id='active'>Active</button></li>
+                <li><button id='completed'>Completed</button></li>
+            </ul>
             <button id='clearChecked'>Clear completed</button>
         </footer>
     </section>
