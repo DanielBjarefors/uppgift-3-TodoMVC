@@ -72,9 +72,7 @@ main li{
     align-content: space-around;
 }
 
-.delete:hover{
-    opacity:calc(1);
-}
+
 input[type=checkbox]:checked~#listItem {
     text-decoration: line-through;
     color: rgb(228, 228, 228);
@@ -84,9 +82,10 @@ input[type=checkbox] {
     
 }
 
+
 .listItem{
     padding: 10px;
-    margin-right: auto;
+    margin-left: 20px;
 }
 
 main button{
@@ -95,10 +94,15 @@ main button{
     font-size: 20px;
     opacity:calc(0.5);
 }
+.delete{
+    /* opacity: 0; */
+    margin-left: auto;
+}
 
 button:hover{
     opacity:calc(1);
 }
+
 footer button, footer p{
     border: 0;
     background-color: transparent;
