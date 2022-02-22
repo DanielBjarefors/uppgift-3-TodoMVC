@@ -1,6 +1,5 @@
 //todo :)
-//layout footer
-//checkAll button
+//remove template
 
 //event listeners
 document.querySelector("#inputItem").addEventListener('keypress', function (e) {
@@ -25,19 +24,26 @@ function addListItem () {
     let li = document.querySelector("#todoListItem").content.firstElementChild.cloneNode(true);
     li.querySelector(".listItem").textContent = input;
     document.querySelector("#todoList").appendChild(li)
-    
+    li.querySelector(".delete").style.visibility="hidden";
     document.querySelector("#inputItem").value ='';
 
     li.querySelector(".delete").onclick = () => {
         li.remove();
         updateCounter();
     }   
-
     li.querySelector(".checkbox").onclick = () => {
         updateCounter();
     }
     updateCounter();
     document.querySelector("footer").style.display="flex";
+
+    li.addEventListener('mouseenter', e => {
+        li.querySelector(".delete").style.visibility="visible";
+        });
+      
+    li.addEventListener('mouseleave', e => {
+        li.querySelector(".delete").style.visibility="hidden";
+        });
 }
 
 
