@@ -7,21 +7,24 @@ document.querySelector("#inputItem").addEventListener('keypress', function (e) {
       addListItem();
     }
 });
-document.querySelector("#active").addEventListener("click", displayActive);
 document.querySelector("#checkAll").addEventListener("click", checkAllItems);
-document.querySelector("#clearChecked").addEventListener("click", clearCompleted);
 document.querySelector("#all").addEventListener("click", displayAll);
+document.querySelector("#active").addEventListener("click", displayActive);
+document.querySelector("#clearChecked").addEventListener("click", clearCompleted);
 document.querySelector("#completed").addEventListener("click", displayCompleted);
+//starting status
 document.querySelector("footer").style.display="none";
-document.querySelector("#checkAll").style.display="none";   
-
+document.querySelector("#checkAll").style.display="none";  
+//find the DOM elements we need
+let template = document.querySelector("#todoListItem")
+template.remove();
 
 function addListItem () {
     let input = document.querySelector("#inputItem").value;
     if (input==="") {
         return
     }
-    let li = document.querySelector("#todoListItem").content.firstElementChild.cloneNode(true);
+    let li = template.content.firstElementChild.cloneNode(true);
     li.querySelector(".listItem").textContent = input;
     document.querySelector("#todoList").appendChild(li)
     li.querySelector(".delete").style.visibility="hidden";
@@ -37,11 +40,11 @@ function addListItem () {
     updateCounter();
     document.querySelector("footer").style.display="flex";
 
-    li.addEventListener('mouseenter', e => {
+    li.addEventListener('mouseenter', () => {
         li.querySelector(".delete").style.visibility="visible";
         });
       
-    li.addEventListener('mouseleave', e => {
+    li.addEventListener('mouseleave', () => {
         li.querySelector(".delete").style.visibility="hidden";
         });
 }

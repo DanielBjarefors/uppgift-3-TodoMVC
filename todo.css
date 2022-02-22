@@ -81,13 +81,10 @@ input[type=checkbox] {
     transform: scale(2);
     
 }
-
-
 .listItem{
     padding: 10px;
     margin-left: 20px;
 }
-
 main button{
     border: 0;
     background-color: transparent;
@@ -126,4 +123,9 @@ footer{
     align-items: center;
 }
 
+footer ul li button:active, footer ul li button:focus {
+    border: 1px solid rgba(175, 47, 47, 0.219);
+    opacity:calc(1);
+    border-radius: 3px;
+    }
 
