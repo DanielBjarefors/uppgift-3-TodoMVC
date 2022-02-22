@@ -6,7 +6,6 @@ header{
     font-weight: 100;
     text-align: center;
     color: rgba(175, 47, 47, 0.15);
-
 }
 body{
     display: flex;
@@ -23,19 +22,15 @@ section{
     flex-wrap: wrap;
     background: #fff;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
-    align-items: center;
-    
+    align-items: center;    
 }
-
 #checkAll{
     font-size: 25px;
     border-radius: 100%;
-
 }
 #topBox{
     flex-direction: row;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
 }
 #inputItem{
     padding: 16px 16px 16px 16px;
@@ -45,7 +40,6 @@ section{
 textarea:focus, input:focus{
     outline: none;
 }
-
 ::placeholder{
     color: rgb(228, 228, 228);
 }
@@ -57,8 +51,7 @@ main ul{
     align-items: center;
     align-items: flex-start;
     padding-left: 13px;
-    margin: 0;
-    
+    margin: 0;    
 }
 main li{
     display: flex;
@@ -71,8 +64,6 @@ main li{
     height:55px;
     align-content: space-around;
 }
-
-
 input[type=checkbox]:checked~#listItem {
     text-decoration: line-through;
     color: rgb(228, 228, 228);
@@ -92,14 +83,11 @@ main button{
     opacity:calc(0.5);
 }
 .delete{
-    /* opacity: 0; */
     margin-left: auto;
 }
-
 button:hover{
     opacity:calc(1);
 }
-
 footer button, footer p{
     border: 0;
     background-color: transparent;
@@ -122,7 +110,6 @@ footer{
     border-top: 1px solid #ededed;
     align-items: center;
 }
-
 .footerBtn.selected {
     border: 1px solid rgba(175, 47, 47, 0.219);
     opacity:calc(1);
