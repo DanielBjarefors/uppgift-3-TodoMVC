@@ -22,7 +22,7 @@ section{
     flex-wrap: wrap;
     background: #fff;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
-    align-items: center;    
+    min-width: 550px; 
 }
 #checkAll{
     font-size: 25px;
@@ -48,8 +48,6 @@ main ul{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    align-items: flex-start;
     padding-left: 13px;
     margin: 0;    
 }
@@ -70,7 +68,6 @@ input[type=checkbox]:checked~#listItem {
   }
 input[type=checkbox] {
     transform: scale(2);
-    
 }
 .listItem{
     padding: 10px;
@@ -88,11 +85,15 @@ main button{
 button:hover{
     opacity:calc(1);
 }
-footer button, footer p{
+footer ul li button, footer button, footer p{
     border: 0;
     background-color: transparent;
-    font-size: 12px;   
     opacity:calc(0.5);
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+#active{
+    margin: 0 20px 0 20px;
 }
 footer ul{
     align-self: center;
@@ -109,10 +110,17 @@ footer p{
 footer{
     border-top: 1px solid #ededed;
     align-items: center;
+    justify-content: space-between;
+    
 }
 .footerBtn.selected {
     border: 1px solid rgba(175, 47, 47, 0.219);
     opacity:calc(1);
     border-radius: 3px;
     }
+@media (max-width:600px){
+    section{
+        min-width: 0px;
+    }
+}
 
