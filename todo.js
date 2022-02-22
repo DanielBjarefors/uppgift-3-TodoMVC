@@ -14,7 +14,8 @@ document.querySelector("#clearChecked").addEventListener("click", clearCompleted
 document.querySelector("#completed").addEventListener("click", displayCompleted);
 //starting status
 document.querySelector("footer").style.display="none";
-document.querySelector("#checkAll").style.display="none";  
+document.querySelector("#checkAll").style.visibility="hidden";  
+
 //find the DOM elements we need
 let template = document.querySelector("#todoListItem")
 template.remove();
@@ -39,6 +40,7 @@ function addListItem () {
     }
     updateCounter();
     document.querySelector("footer").style.display="flex";
+    
 
     li.addEventListener('mouseenter', () => {
         li.querySelector(".delete").style.visibility="visible";
@@ -81,11 +83,18 @@ function clearCompleted () {
     updateCounter();
 }
 
+function removeSelected(){
+    document.querySelector(".selected").classList.remove("selected");
+
+}
+
 function displayAll () {
     let items = document.querySelectorAll(".list")
     for (const e of items) {        
             e.style.display="flex"      
     }
+    removeSelected();
+    document.querySelector("#all").classList.add("selected")
 }
 function displayActive () {
     let items = document.querySelectorAll(".list")
@@ -97,6 +106,8 @@ function displayActive () {
             e.style.display="flex" 
         }
     }
+    removeSelected();
+    document.querySelector("#active").classList.add("selected")
 }
 
 function displayCompleted () {
@@ -109,6 +120,8 @@ function displayCompleted () {
             e.style.display="flex" 
         }
     }
+    removeSelected();
+    document.querySelector("#completed").classList.add("selected")
 }
 
 function updateCounter () {
@@ -122,14 +135,14 @@ function updateCounter () {
         allItems++
     }
     if (allItems===0) {
-        document.querySelector("#checkAll").style.display="none";  
+        document.querySelector("#checkAll").style.visibility="hidden";  
         document.querySelector("footer").style.display="none"; 
     }
 
     if (activeItems>0) {
         document.querySelector("#itemsLeft").style.visibility="visible";
         document.querySelector("#itemsLeft").textContent=activeItems+" items left";
-        document.querySelector("#checkAll").style.display="initial";
+        document.querySelector("#checkAll").style.visibility="visible";
     } 
     else {
         document.querySelector("#itemsLeft").style.visibility="hidden";    
