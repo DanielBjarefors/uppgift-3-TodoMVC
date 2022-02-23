@@ -83,7 +83,6 @@ function clearCompleted() {
 
 function removeSelected() {
     document.querySelector(".selected").classList.remove("selected");
-
 }
 
 function displayAll() {
@@ -139,7 +138,12 @@ function updateCounter() {
 
     if (activeItems > 0) {
         document.querySelector("#itemsLeft").style.visibility = "visible";
-        document.querySelector("#itemsLeft").textContent = activeItems + " items left";
+        if (activeItems ===1) {
+            document.querySelector("#itemsLeft").textContent = activeItems + " item left";
+        } else {
+            document.querySelector("#itemsLeft").textContent = activeItems + " items left";
+        }
+        
         document.querySelector("#checkAll").style.visibility = "visible";
     }
     else {
