@@ -110,8 +110,7 @@ footer p{
 footer{
     border-top: 1px solid #ededed;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
 .footerBtn.selected {
     border: 1px solid rgba(175, 47, 47, 0.219);
